@@ -1,0 +1,18 @@
+Will export all of your PSG posts, tags, and comments into the Movable
+Type Import / Export format. This will allow you to import this data into
+other blogging software, such as Moveable Type or WordPress.
+
+To use, you will need to configure it slightly – either copy the
+configuration array (which defines the location of your PSG files) from
+PSG’s index.php, or include a file which sets that information (for me,
+that was blogadmin.php). You will also need to change the ‘AUTHOR’ field
+in the dump_post function to whatever you want these posts to be
+attributed to (assuming they are all by the same person, of course).
+
+Known issues:
+
+  * When I imported the file generated here into WordPress all of my
+    comments had quotes and doublequotes escaped after import. I fixed
+    this by manually replacing those strings in the comments table in
+    the WordPress database.
+  * Permalinks inside of posts to other posts will not work, natch.
